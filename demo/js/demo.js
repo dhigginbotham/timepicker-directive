@@ -3,13 +3,13 @@ var app = angular.module('timepickerDemoApp', ['timepicker']);
 app.controller('timepickerDemoController', ['$scope',
   function($scope) {
     $scope.startTime;
-    $scope.currentDate = '7/17/2014';
-    $scope.defaultTime = '11:00 pm';
+    $scope.currentDate = '7/18/2014';
+    $scope.defaultTime = '10:00 am';
     $scope.toggleDate = function () {
-      if ($scope.currentDate == '7/17/2014') {
-        $scope.currentDate = '7/18/2014';
+      if ($scope.currentDate == '7/18/2014') {
+        $scope.currentDate = '7/19/2014';
       } else {
-        $scope.currentDate = '7/17/2014';
+        $scope.currentDate = '7/18/2014';
       }
     }
   }
