@@ -8,8 +8,8 @@
   <div ng-app="timepickerDemoApp">
     <div ng-controller="timepickerDemoController">
 
-      {{startTime}}
-      <div timepicker ng-model="startTime" default-time="defaultTime" current-date="currentDate" min-time="" max-time=""></div>
+      {{startTime}} | {{properDate}}
+      <div timepicker ng-model="startTime" default-time="defaultTime" current-date="currentDate" change-event="updateDateAttr(date, time)"></div>
       <button ng-click="toggleDate()">Date Toggle: {{currentDate}}</button>
     </div>
   </div>
