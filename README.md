@@ -8,4 +8,11 @@ View the contents of `demo/index.html` && `demo/js/demo.js`
 [Click Here](http://htmlpreview.github.io/?https://github.com/dhigginbotham/timepicker-directive/blob/master/demo/index.html)
 
 ##Usage
-`<div timepicker ng-model="selectedTime" default-time="defaultTime" current-date="currentDate" change-event="updateDateAttr(date, time)"></div>`
+```html
+<div timepicker 
+   ng-model="selectedTime" 
+   default-time="defaultTime" 
+   current-date="currentDate" 
+   change-event="updateDateAttr(date, time)"
+ ></div>
+```
