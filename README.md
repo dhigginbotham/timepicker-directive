@@ -5,6 +5,8 @@ Very simple solution with optimizations in mind -- Namely a better way of render
 
 ##Demo
 View the contents of `demo/index.html` && `demo/js/demo.js`
+
+#### or
 [Click Here](http://htmlpreview.github.io/?https://github.com/dhigginbotham/timepicker-directive/blob/master/demo/index.html)
 
 ##Usage
