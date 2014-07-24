@@ -2,10 +2,14 @@ var app = angular.module('timepickerDemoApp', ['timepicker']);
 
 app.controller('timepickerDemoController', ['$scope',
   function($scope) {
-    $scope.startTime;
-    $scope.currentDate = '7/22/2014';
+
+    var TODAY = new Date();
+    var TOMORROW = true;
+
+    $scope.selectedTime = TODAY.toLocaleTimeString();
     $scope.defaultTime = '10:00 pm';
-  
+    $scope.currentDate = TODAY.toLocaleDateString();
+
     $scope.updateDateAttr = function(date, time) {
       if (typeof date != 'undefined' && typeof time != 'undefined') {
         $scope.properDate = new Date(date + ' ' + time);
@@ -15,11 +19,14 @@ app.controller('timepickerDemoController', ['$scope',
     }
 
     $scope.toggleDate = function() {
-      if ($scope.currentDate == '7/22/2014') {
-        $scope.currentDate = '7/23/2014';
+      TOMORROW = !TOMORROW;
+      if (TOMORROW) {
+        TODAY.setDate(TODAY.getDate()-1);
       } else {
-        $scope.currentDate = '7/22/2014';
+        TODAY.setDate(TODAY.getDate()+1);
       }
+      $scope.currentDate = TODAY.toLocaleDateString();
     }
+
   }
 ]);

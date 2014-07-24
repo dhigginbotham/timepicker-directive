@@ -4,17 +4,15 @@
   <title></title>
 </head>
 <body>
-
   <div ng-app="timepickerDemoApp">
     <div ng-controller="timepickerDemoController">
-
-      {{startTime}} | {{properDate}}
-      <div timepicker ng-model="startTime" default-time="defaultTime" current-date="currentDate" change-event="updateDateAttr(date, time)"></div>
+      <div>{{selectedTime}} | {{properDate|date}}</div>
+      <br/>
+      <div timepicker ng-model="selectedTime" default-time="defaultTime" current-date="currentDate" change-event="updateDateAttr(date, time)"></div>
+      <br/>
       <button ng-click="toggleDate()">Date Toggle: {{currentDate}}</button>
     </div>
   </div>
-
-
   <script type="text/javascript" src="js/angular.js"></script>
   <script type="text/javascript" src="../lib/timepicker.js"></script>
   <script type="text/javascript" src="js/demo.js"></script>
